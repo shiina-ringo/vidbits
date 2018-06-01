@@ -57,9 +57,7 @@ form {
 
 form input[name=title] {
   display: block;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  margin-top: 5px;
+  margin: 10px auto;
   width: 75%;
   border: solid 1px #c9c9c9;
   background-color: #eeeeee;
@@ -71,9 +69,7 @@ form input[name=title] {
 
 form input[name=url] {
   display: block;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  margin-top: 5px;
+  margin: 10px auto;
   width: 75%;
   border: solid 1px #c9c9c9;
   background-color: #eeeeee;
@@ -93,6 +89,11 @@ form textarea {
   font-family: Montserrat;
   font-size: 16px;
   padding: 5px;
+}
+
+.error {
+  color: red;
+  margin: 10px auto;
 }
 
 /* Show page */

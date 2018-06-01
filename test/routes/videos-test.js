@@ -8,8 +8,8 @@ const Video = require('../../models/video');
 const {connectDatabase, disconnectDatabase, parseTextFromHTML, parseValueFromHTML, parseSrcFromHTML} = require('../utils');
 
 const seedVideo = { title: "Drinking Songs",
-		       description: "By: Matt Elliott",
-		       url: "https://www.youtube.com/embed/YDWEz1mia1I" };
+		    description: "By: Matt Elliott",
+		    url: "https://www.youtube.com/embed/YDWEz1mia1I" };
 
 const seedVideoWithMissingTitle = { description: "By: Matt Elliott",
 				    url: "https://www.youtube.com/embed/YDWEz1mia1I" };

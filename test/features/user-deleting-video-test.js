@@ -2,8 +2,8 @@ const {assert} = require('chai');
 const {submitVideo} = require('../utils');
 
 const seedVideo = { title: "Drinking Songs",
-                       description: "By: Matt Elliott",
-                       url: "https://www.youtube.com/embed/YDWEz1mia1I" };
+                    description: "By: Matt Elliott",
+                    url: "https://www.youtube.com/embed/YDWEz1mia1I" };
 
 describe('User deletes single video', () => {
   describe('can delete the video', () => {

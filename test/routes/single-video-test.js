@@ -7,12 +7,12 @@ const Video = require('../../models/video');
 const {connectDatabase, disconnectDatabase, parseTextFromHTML, parseValueFromHTML, parseSrcFromHTML} = require('../utils');
 
 const seedVideo = { title: "Drinking Songs",
-		       description: "By: Matt Elliott",
-		       url: "https://www.youtube.com/embed/YDWEz1mia1I" };
+		    description: "By: Matt Elliott",
+		    url: "https://www.youtube.com/embed/YDWEz1mia1I" };
 
 const updatedVideo = { title: "For the Damaged Coda",
-			  description: "By: Blonde Redhead",
-			  url: "https://www.youtube.com/embed/4Js-XbNj6Tk" };
+		       description: "By: Blonde Redhead",
+		       url: "https://www.youtube.com/embed/4Js-XbNj6Tk" };
 
 const updatedVideoWithMissingTitle = { description: "By: Blonde Redhead",
 				       url: "https://www.youtube.com/embed/4Js-XbNj6Tk" };
@@ -95,8 +95,8 @@ describe('Server path: /videos/:videoId/updates', () => {
       const response = await request(app).post('/videos/' + video._id + '/updates').type('form').send(updatedVideoWithMissingTitle);
       
       assert.equal(parseTextFromHTML(response.text, 'span#title-input-error'), 'Path `title` is required.');
-      assert.equal(parseTextFromHTML(response.text, 'textarea#description-input'), updatedVideo.description);
-      assert.equal(parseValueFromHTML(response.text, 'input#url-input'), updatedVideo.url);
+      assert.equal(parseTextFromHTML(response.text, 'textarea#description-input'), updatedVideoWithMissingTitle.description);
+      assert.equal(parseValueFromHTML(response.text, 'input#url-input'), updatedVideoWithMissingTitle.url);
     });
   });
 });
